@@ -8,9 +8,9 @@ func main() {
 	var thisIs string
 	thisIs = "Isso é"
 
-	oneType := "uma string"
+	oneType := "uma string" + "a "
 
 	fmt.Println(thisIs, oneType)
-	//fmt.Print(globalConstant)
-	//fmt.Printf("%s %s e isso um float %.2f ", thisIs, oneType, globalConstant)
+	fmt.Print(globalConstant)
+	fmt.Printf("%s %s e isso um float %.3f ", thisIs, oneType, globalConstant)
 }

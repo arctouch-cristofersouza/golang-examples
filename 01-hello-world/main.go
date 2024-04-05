@@ -9,9 +9,9 @@ import "fmt"
 //----------
 
 // What is init ?
-// func init() {
-// 	fmt.Println("Hello, world!")
-// }
+func init() {
+	fmt.Println("Hello, world!")
+}
 
 func main() {
 	fmt.Println("Hello Group!")

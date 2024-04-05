@@ -10,13 +10,13 @@ func main() {
 
 	//Search by position //// ASCII
 	fmt.Println("\nPegar char em uma posicao")
-	fmt.Println(string(name[0]))
-	fmt.Println(string(name[2]))
+	fmt.Println(name[0])
+	fmt.Println(string(name[2])) //"test"
 
 	//Get chat at position
 	fmt.Println("\nPegar partes da string")
-	fmt.Println(name[0:2])
-	fmt.Println(name[2:])
+	fmt.Println(name[0:2]) //"test"
+	fmt.Println(name[2:])  //"test"
 
 	//copy
 	var newstring = name[:]

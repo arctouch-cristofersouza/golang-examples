@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// hash table or map
 func main() {
 	m := make(map[string]int)
 	m["k1"] = 7

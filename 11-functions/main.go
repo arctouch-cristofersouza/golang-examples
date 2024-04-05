@@ -19,6 +19,17 @@ func splitWords(word, delimeter string) (string, string) {
 	return words[0], words[1]
 }
 
+func sumElipsis(nums ...int) int {
+
+	res := 0
+
+	for _, n := range nums {
+		res += n
+	}
+
+	return res
+}
+
 func main() {
 
 	res := plus(1, 2)
@@ -31,7 +42,22 @@ func main() {
 	word1, word2 := splitWords("one - two", "-")
 	fmt.Println(word1, word2)
 
+	//Blank Identifier
 	_, word3 := splitWords("one - three", "-")
 	fmt.Println(word1, word2, word3)
+
+	//anonymous
+	sum := func(a, b, c int) int {
+		return a + b + c
+	}(3, 5, 7)
+
+	fmt.Println("5+3+7 =", sum)
+
+	//elipsis
+	s1 := sumElipsis(1, 2, 3)
+	s2 := sumElipsis(1, 2, 3, 4)
+	s3 := sumElipsis(1, 2, 3, 4, 5)
+
+	fmt.Println(s1, s2, s3)
 
 }

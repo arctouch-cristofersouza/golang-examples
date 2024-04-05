@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	//default one
+	//For
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 	}
 
+	//While
 	i := 0
 	for i < 10 {
 		fmt.Println(i)
@@ -15,22 +16,15 @@ func main() {
 	}
 
 	//with Break
-	i = 0
+	k := 0
 	for {
-		fmt.Println(i)
+		fmt.Println(k)
 
-		if i < 10 {
+		if k < 10 {
 			break
 		}
 
 		i++
-	}
-
-	//with range
-	numbers := []int{1, 2, 3}
-
-	for i, num := range numbers {
-		fmt.Printf("%d: %d\n", i, num)
 	}
 
 }

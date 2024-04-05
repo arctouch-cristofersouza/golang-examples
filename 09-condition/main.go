@@ -16,6 +16,13 @@ func main() {
 		fmt.Println("Voce é adulto legalmente no brasil")
 	}
 
+	age = 100
+	if age == 100 {
+		fmt.Println("Uau vc viveu muito")
+	} else {
+		fmt.Println("Ainda novo")
+	}
+
 	age = 11
 	if age < 12 {
 		fmt.Println("Voce é uma criança")
