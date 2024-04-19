@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+//make
+// -  memory allocation and initialization.
+// - use for slices, maps, and channels
+//func make(t Type, size ...IntegerType) Type
+
 func main() {
 	fmt.Println("-- MAKE --")
 	a := make([]int, 0)
@@ -18,6 +23,7 @@ func main() {
 	fmt.Println("-- NEW --")
 	cPtr := new([]int)
 	fmt.Println("pointer == nil :", *cPtr == nil)
+	//returns a pointer to the zero value of that type
 	fmt.Printf("pointer value: %p\n\n", *cPtr)
 
 	fmt.Println("-- VAR (not initialized) --")

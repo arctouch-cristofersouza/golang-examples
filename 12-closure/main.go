@@ -2,24 +2,21 @@ package main
 
 import "fmt"
 
-func intSeq() func() int {
-
-	i := 0
-	return func() int {
-		i++
-		return i
+// A closure is a function value that references variables from outside its body
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
 	}
 }
 
 func main() {
-
-	nextInt := intSeq()
-
-	fmt.Println(nextInt())
-	fmt.Println(nextInt())
-	fmt.Println(nextInt())
-	fmt.Println(nextInt())
-
-	nextInt2 := intSeq()
-	fmt.Println(nextInt2())
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
 }
