@@ -13,18 +13,6 @@ func invalidNumber(arg int) (int, error) {
 	return arg + 3, nil
 }
 
-var ErrOutOfTea = fmt.Errorf("no more tea available")
-var ErrPower = fmt.Errorf("can't boil water")
-
-func makeTea(arg int) error {
-	if arg == 2 {
-		return ErrOutOfTea
-	} else if arg == 4 {
-		return fmt.Errorf("making tea: %w", ErrPower)
-	}
-	return nil
-}
-
 func main() {
 
 	//default way to deal with error in go
@@ -54,4 +42,16 @@ func main() {
 
 		fmt.Println("Tea is ready!")
 	}
+}
+
+var ErrOutOfTea = fmt.Errorf("no more tea available")
+var ErrPower = fmt.Errorf("can't boil water")
+
+func makeTea(arg int) error {
+	if arg == 2 {
+		return ErrOutOfTea
+	} else if arg == 4 {
+		return fmt.Errorf("making tea: %w", ErrPower)
+	}
+	return nil
 }

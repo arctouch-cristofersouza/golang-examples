@@ -23,10 +23,8 @@ func main() {
 		go worker(i, ch, &wg)
 	}
 
-	go func() {
-		wg.Wait()
-		close(ch) // Close the channel when all workers have finished
-	}()
+	wg.Wait()
+	close(ch) // Close the channel when all workers have finished
 
 	for result := range ch {
 		fmt.Println(result) // Process the results
